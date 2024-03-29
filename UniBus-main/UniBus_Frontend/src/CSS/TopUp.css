@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#frth {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Added this line */
+    background-color: #6daaecdc;
+}
+.page4{
+    background-color: #ffffff;
+    border-radius: 2px;
+    width: 30vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+.inputField{
+    display: flex;
+    
+}
+.Info{
+    height: 3vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Stop {
+  background-color: #ffce5c;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem;
+}
+.BusNum{
+  width:40vw;
+}
+
+
+

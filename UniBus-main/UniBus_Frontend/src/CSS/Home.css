@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.Hero {
+  margin: 3rem;
+  height: 80vh;
+  width: 100vw;
+}
+
+.HeroImg {
+  margin-top: 4rem;
+}
+
+.Line1 {
+  font-size: 2vw;
+  color: #408bdb;
+  margin-top: 7%;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.Line2 {
+  color: #3f8cdc;
+  font-size: 10vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.518);
+}
+
+.Line3 {
+  color: #3f8cdc;
+  margin-top: 0;
+  margin-left: 16rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  /* text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3); */
+  text-align: left; /* Default alignment */
+}
+
+/* @media (max-width: 1200px) {
+  .Line3 {
+    text-align: left; 
+  }
+}
+
+@media (max-width: 766px) {
+  .Line3 {
+    text-align: center; 
+  }
+} */

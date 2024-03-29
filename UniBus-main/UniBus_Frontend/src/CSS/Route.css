@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+#thrd {
+  margin-top: 5rem;
+}
+.Hero3 {
+  min-height: 100vh;
+}
+#hd3 {
+  color: #3f8cdc;
+}
+.Flex {
+  padding: 2rem;
+  border: #3f8cdc 2px solid;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .Flex {
+    display: block; 
+  }
+}
+@media (min-width: 769px) {
+  .Flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute routes evenly between rows */
+  }
+}

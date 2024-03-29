@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: sans-serif; */
+}
+.Nav{
+  background-color: #ffce5c;
+}
+.nav {
+  display: flex;
+}
+.logo {
+  height: 8vh;
+}
+.menu {
+  display: flex;
+}
+.Heading{
+  font-family: Monoton;
+  font-size: larger;
+}
+
