@@ -1,6 +1,6 @@
-import {z} from "zod"
+const {z}=require("zod")
 
-export const userSignup=z.object({
+ const userSignup=z.object({
     username:z
     .string({required_error:"SystemId is required"})
     .min(10,{message:"InValid SystemID"}),
@@ -11,7 +11,7 @@ export const userSignup=z.object({
     .min(5,{messgae:"Minimum length of password should be 5"})
 })
 
-export const userSignin=z.object({
+ const userSignin=z.object({
     username:z
     .string({required_error:"SystemId is required"})
     .min(10,{message:"InValid SystemID"}),
@@ -19,3 +19,7 @@ export const userSignin=z.object({
     password:z.string({required_error:"password is required"})
     .min(5,{messgae:"Minimum length of password should be 5"})
 })
+
+module.exports={
+    userSignup,userSignin
+}

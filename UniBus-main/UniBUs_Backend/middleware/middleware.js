@@ -2,15 +2,17 @@ const jwt =require("jsonwebtoken")
 const key="helllo"
 
 
-export async function middleware(req,res,next){
-    let token=req.headers.Authorization;
+
+ async function middleware(req,res,next){
+    let token=req.headers.authorization
+    console.log(token)
 
     if(!token || !token.startsWith("Bearer")){
         return res.json({
             message:"user not found"
         })
     }
-    token=token.split(" ")[0];
+    token=token.split(" ")[1];
 
     const verified=jwt.verify(token,key)
     if(!verified){
@@ -21,4 +23,8 @@ export async function middleware(req,res,next){
     req.userId=verified.userId;
     next()
 
+}
+
+module.exports={
+    middleware
 }
