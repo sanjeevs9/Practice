@@ -8,7 +8,7 @@ const key="helllo"
     console.log(token)
 
     if(!token || !token.startsWith("Bearer")){
-        return res.json({
+        return res.status(400).json({
             message:"user not found"
         })
     }
@@ -16,7 +16,7 @@ const key="helllo"
 
     const verified=jwt.verify(token,key)
     if(!verified){
-        return res.json({
+        return res.status(400).json({
             message:"user not found"
         })
     }

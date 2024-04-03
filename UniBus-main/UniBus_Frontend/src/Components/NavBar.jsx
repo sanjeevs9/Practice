@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/NavBar.css";
+import axios from "axios";
+import { network } from "../network";
 const NavBar = () => {
+  const [username,setusername]=useState("")
+  const token=localStorage.getItem("token")
+
+  useEffect(()=>{
+    if(!token){
+      return
+    }
+    axios.get(`${network}/user/get`,{
+      headers:{
+        Authorization:`Bearer ${token}`
+      }
+    }).then(res=>{
+      setusername(res.data.username)
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+  },[username])
+
+  
   return (
 
     <nav className="navbar navbar-expand-md Nav">
@@ -16,6 +38,14 @@ const NavBar = () => {
 
         <div className="collapse navbar-collapse justify-content-end align-center me-5 " id="navbarNav">
           <ul className="navbar-nav">
+            {
+              username!=0?<li>
+              <div>
+                Username:{username}
+              </div>
+            </li>:""
+            }
+            
             <li className="nav-item">
               <a className="nav-link fw-bold m-1" href="#frst">Home</a>
             </li>
@@ -29,7 +59,10 @@ const NavBar = () => {
               <a className="nav-link fw-bold m-1" href="#frth">Recharge</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-bold m-1" href="#ffth">Login/SignUp</a>
+              <a className="nav-link fw-bold m-1" href="/login">Login/SignUp</a>
+            </li>
+            <li>
+            <a className="nav-link fw-bold m-1" onClick={()=>{localStorage.removeItem("token")}} href="/">Logout</a>
             </li>
           </ul>
         </div>

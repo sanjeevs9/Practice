@@ -14,13 +14,13 @@ router.post("/add",middleware,async(req,res)=>{
     console.log(id)
     try{
         if( typeof payload.cost!=="number"){
-            return res.json({
+            return res.status(400).json({
                 message:"Please Type Number"
             })
         }
         const user=await User.findById(id)
         if(!user){
-            return res.json({
+            return res.status(400).json({
                 message:"User not found"
             })
         }
@@ -39,10 +39,25 @@ router.post("/add",middleware,async(req,res)=>{
             })
 
     }catch(error){
-        return res.json({
+        return res.status(400).json({
             message:error
         })
     }
+})
+
+//get balance
+router.get("/balance",middleware,async(req,res)=>{
+    const id=req.userId;
+    const wallet=await Wallet.findOne({user:id})
+    if(!wallet){
+        return res.status(400).json({
+            message:"user not found please login"
+        })
+    }
+  
+    res.json({
+        value:wallet.value
+    })
 })
 
 //transaction
@@ -55,17 +70,15 @@ router.post("/transaction",middleware,async(req,res)=>{
         })
     }
     try{
-        const session=await mongoose.startSession();
-        session.startTransaction();
         const user=await User.findById(id);
         if(!user){
-            return res.json({
+            return res.status(400).json({
                 message:"user not found"
             })
         }
         let wallet=await Wallet.findOne({user:id})
         if(wallet.value<cost){
-            return res.json({
+            return res.status(400).json({
                 message:"Not enough balance"
             })
         }
@@ -82,6 +95,9 @@ router.post("/transaction",middleware,async(req,res)=>{
 
     }catch(error){
         console.log(error)
+        res.status(400).json({
+            message:"error"
+        })
     }
 })
 

@@ -1,0 +1,126 @@
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color:  #ffffff; 
+    overflow-x: hidden;
+  }  
+  .container {  
+  
+    width: 50%;
+    height:86%;
+    margin:auto;
+    box-shadow: 0px 4px 20px 0px #c1c1c1a6;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }  
+  .account{
+   /* color: #e3e2e2; */
+   /* padding-bottom: 0px; */
+   width: auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 20px 6px #090b6f85;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom:0 px;
+  
+  }
+    
+  input[type=text], input[type=password],input[type=gmail], textarea {  
+    
+    width: 50%;  
+    padding: 15px; 
+    /* padding-bottom:0px; */
+    /* align-items: center; */
+    
+    margin: 5px 0 0px 0;  
+    display: inline-block;  
+    border: none;  
+    background: #f1f1f1;  
+  } 
+  .checkbox{
+  
+    width: 25%;  
+    padding: 15px; 
+ 
+    margin: 5px 0 0 0;  
+    /* display: inline-block;   */
+    border: none;  
+    background: #f1f1f1; 
+  } 
+  /* .div:hover {
+  color: red;
+  } */
+  input[type=text]:focus, input[type=password]:focus,input[type=gmail]:focus, select.checkbox:focus {  
+    background-color: rgb(200, 254, 255);  
+    outline: none;  
+  }  
+   div {        
+        padding-right: 10px;
+        padding-left: 10px;
+        /* padding-left: 0px; */
+        padding-top: 10px;
+        padding-bottom: 0px;
+   }  
+  hr {  
+    border: 1px solid #f1f1f1;  
+    margin-bottom: 25px;  
+  }  
+  .sendOTP {  
+    /* background-color: rgb(93, 255, 93);   */
+    color: white;  
+    /* padding: 16px 20px;   */
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin:  0px;  
+    border: none;  
+    cursor: pointer;  
+    width: 25%;
+    display: inline-block;  
+    opacity: 0.9;  
+    border-radius: 50px;
+    box-shadow: 0px 4px 20px 0px #49c628a6;
+      background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+  }  
+  .sendOTP:hover {  
+    opacity: calc(120);  
+  }  
+  
+  .logo{
+      margin: 0px;
+    width: 16%;
+    padding: 0px;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+   /* .logo1{
+     padding-bottom: 30px; 
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-right: 15px;
+  }  */
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .container2{
+    /* background-color: #b9b8b8; */
+    margin: -10px;
+    box-shadow: 0 3px 6px 1px #cbcbcb57;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    
+  }
+  .btn {  
+    text-align: center;
+  }  
+  .btn:hover {  
+    opacity: 1;  
+  }  
+  div.gmail{
+    padding-left: 10px;
+  }
